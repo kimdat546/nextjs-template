@@ -1,9 +1,14 @@
 import Head from 'next/head';
+import React from 'react';
 import styles from './PrimaryLayout.module.css';
 
 export interface IPrimaryLayout {}
-
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
+type PrimaryLayoutProps = {
+  children?: React.ReactNode;
+};
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({
+  children,
+}: PrimaryLayoutProps) => {
   return (
     <>
       <Head>
